@@ -30,13 +30,21 @@
             ignore-modifiers;
             release-after-ms = <60000>;
         };
+
+        lingering_sticky: lingering_sticky {
+            compatible = "zmk,behavior-sticky-key";
+            label = "LINGERING_STICKY";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+        };
     };
 
     macros {
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &kp TAB>;
+            bindings = <&lingering_sticky LEFT_ALT &kp TAB>;
             label = "ALT_TAB";
         };
     };
