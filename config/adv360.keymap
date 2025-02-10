@@ -36,7 +36,8 @@
             label = "LINGERING_STICKY";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <1000>;
+            release-after-ms = <5000>;
+            ignore-modifiers;
         };
     };
 
@@ -55,6 +56,11 @@
         keypad-toggle {
             bindings = <&tog 2>;
             key-positions = <67 68>;
+        };
+
+        shift-f5 {
+            bindings = <&kp LS(F5)>;
+            key-positions = <5 4>;
         };
     };
 
@@ -85,7 +91,7 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3        &kp N4     &kp N5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp EQUAL  &kp N1     &kp N2    &kp N3        &kp N4     &kp F5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp LS(LBRC)  &kp LBKT   &kp T   &none                                                    &none      &kp Y   &kp N7      &kp N8        &kp N9         &kp MINUS        &kp BSLH
 &kp ESC    &kp LBKT   &kp RBKT  &kp LS(LPAR)  &kp N9     &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp N4      &kp N5        &kp N6         &kp PLUS         &kp SQT
 &kp ESC    &kp Z      &kp X     &kp LBKT      &kp RBKT   &kp B                        &kp HOME      &kp PG_UP                        &kp N0  &kp N1      &kp N2        &kp N3         &kp RET          &kp RSHFT
