@@ -67,7 +67,7 @@
 &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                        &mo 4        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                                                         &none        &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
 &kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &none            &kp LCTRL  &kp LALT                 &kp LGUI      &kp RCTRL                  &none        &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
-&kp BSPC   &kp Z      &kp X     &kp C     &kp D      &kp V                               &lt 5 LA(BACKSPACE)      &kp PG_UP                                             &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp RET
+&kp BSPC   &kp Z      &kp X     &kp C     &kp D      &kp V                               &lt 5 LC(BACKSPACE)      &kp PG_UP                                             &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp RET
 &mo 6      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &lt 7 BACKSPACE  &kp SPACE  &lt 2 DEL                &lt 2 DOLLAR  &one_shot_mod RIGHT_SHIFT  &lt 2 ENTER          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
             >;
         };
