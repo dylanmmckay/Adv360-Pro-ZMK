@@ -91,11 +91,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3        &kp N4     &kp F5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp LS(LBRC)  &kp LBKT   &kp T   &none                                                    &none      &kp Y   &kp N7      &kp N8        &kp N9         &kp MINUS        &kp BSLH
-&kp ESC    &kp LBKT   &kp RBKT  &kp LS(LPAR)  &kp N9     &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp N4      &kp N5        &kp N6         &kp PLUS         &kp SQT
-&kp ESC    &kp Z      &kp X     &kp LBKT      &kp RBKT   &kp B                        &kp HOME      &kp PG_UP                        &kp N0  &kp N1      &kp N2        &kp N3         &kp RET          &kp RSHFT
-&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT      &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp N0      &kp DOWN      &kp DOT        &kp RBKT         &mo 3
+&kp EQUAL  &kp N1     &kp N2    &kp N3                &kp N4                 &kp F5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp T   &none                                                    &none      &kp Y   &kp N7      &kp N8        &kp N9         &kp MINUS        &kp BSLH
+&kp ESC    &kp LBKT   &kp RBKT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp N4      &kp N5        &kp N6         &kp PLUS         &kp SQT
+&kp ESC    &kp Z      &kp X     &kp LBKT              &kp RBKT               &kp B                        &kp HOME      &kp PG_UP                        &kp N0  &kp N1      &kp N2        &kp N3         &kp RET          &kp RSHFT
+&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT              &kp RIGHT                      &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp N0      &kp DOWN      &kp DOT        &kp RBKT         &mo 3
             >;
         };
 
