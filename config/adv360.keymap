@@ -48,6 +48,13 @@
             bindings = <&lingering_sticky LEFT_ALT &kp TAB &lingering_sticky LEFT_ALT>;
             label = "ALT_TAB";
         };
+
+        thirty_jump: thirty_jump {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+            label = "THIRTY_JUMP";
+        };
     };
 
     combos {
@@ -91,11 +98,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3                &kp N4                 &kp F5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp T   &none                                                    &none      &kp Y   &kp N7      &kp N8        &kp N9         &kp MINUS        &kp BSLH
-&kp ESC    &kp LBKT   &kp RBKT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp N4      &kp N5        &kp N6         &kp PLUS         &kp SQT
-&kp ESC    &kp Z      &kp X     &kp LBKT              &kp RBKT               &kp B                        &kp HOME      &kp PG_UP                        &kp N0  &kp N1      &kp N2        &kp N3         &kp RET          &kp RSHFT
-&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT              &kp RIGHT                      &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp N0      &kp DOWN      &kp DOT        &kp RBKT         &mo 3
+&kp LA(EQUAL)  &kp N1     &kp N2    &kp N3                &kp N4                 &kp F5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB        &kp Q      &kp W     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp T   &none                                                    &none      &kp Y   &kp N7      &kp N8        &kp N9         &kp MINUS        &kp BSLH
+&kp ESC        &kp LBKT   &kp RBKT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp N4      &kp N5        &kp N6         &kp PLUS         &kp SQT
+&kp ESC        &kp Z      &kp X     &kp LBKT              &kp RBKT               &kp B                        &kp HOME      &kp PG_UP                        &kp N0  &kp N1      &kp N2        &kp N3         &kp RET          &kp RSHFT
+&mo 3          &kp GRAVE  &kp CAPS  &kp LEFT              &kp RIGHT                      &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp N0      &kp DOWN      &kp DOT        &kp RBKT         &mo 3
             >;
         };
 
@@ -133,11 +140,11 @@
 
         Left_Fn {
             bindings = <
-&trans  &trans          &trans     &trans     &trans     &trans     &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Q           &kp W      &kp E      &kp R      &kp T      &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp G      &trans    &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_SHIFT  &trans     &trans     &trans                &alt_tab  &kp LC(TAB)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans     &trans     &trans     &trans     &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Q           &kp W      &kp E      &kp R      &kp T      &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp G      &thirty_jump  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                             &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_SHIFT  &trans     &trans     &trans                &alt_tab      &kp LC(TAB)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
