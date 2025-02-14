@@ -39,13 +39,43 @@
             release-after-ms = <5000>;
             ignore-modifiers;
         };
+
+        toggle_layer_on: toggle_layer_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLE_LAYER_ON";
+            #binding-cells = <1>;
+        };
+
+        toggle_layer_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLE_LAYER_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
+
+        toggle_key_on: toggle_key_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "TOGGLE_KEY_ON";
+            #binding-cells = <1>;
+        };
+
+        toggle_key_off: toggle_key_off {
+            compatible = "zmk,behavior-key-toggle";
+            label = "TOGGLE_KEY_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
     };
 
     macros {
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lingering_sticky LEFT_ALT &kp TAB &lingering_sticky LEFT_ALT>;
+            bindings =
+                <&toggle_key_on LEFT_ALT &kp TAB>,
+                <&macro_wait_time 10000>,
+                <&toggle_key_off LEFT_ALT>;
+
             label = "ALT_TAB";
         };
 
@@ -54,6 +84,17 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
             label = "THIRTY_JUMP";
+        };
+
+        alt_tab_hold: alt_tab_hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&toggle_key_on LEFT_ALT &kp TAB>,
+                <&macro_pause_for_release>,
+                <&toggle_key_off LEFT_ALT>;
+
+            label = "ALT_TAB_HOLD";
         };
     };
 
@@ -140,11 +181,11 @@
 
         Left_Fn {
             bindings = <
-&trans  &trans          &trans     &trans     &trans     &trans     &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Q           &kp W      &kp E      &kp R      &kp T      &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp G      &thirty_jump  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                             &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_SHIFT  &trans     &trans     &trans                &alt_tab      &kp LC(TAB)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans     &trans     &trans     &trans     &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Q           &kp W      &kp E      &kp R      &kp T      &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp G      &thirty_jump   &trans       &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                              &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_SHIFT  &trans     &trans     &trans                &alt_tab_hold  &kp LC(TAB)  &alt_tab      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
