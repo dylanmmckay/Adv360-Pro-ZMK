@@ -181,11 +181,11 @@
 
         Left_Fn {
             bindings = <
-&trans  &trans          &trans     &trans     &trans     &trans     &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Q           &kp W      &kp E      &kp R      &kp T      &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp G      &thirty_jump   &trans       &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                              &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_SHIFT  &trans     &trans     &trans                &alt_tab_hold  &kp LC(TAB)  &alt_tab      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans     &trans       &trans     &trans     &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Q           &kp W      &kp E        &kp R      &kp T      &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)    &kp LC(F)  &kp G      &thirty_jump   &trans       &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)                              &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_SHIFT  &trans     &kp LS(TAB)  &kp TAB               &alt_tab_hold  &kp LC(TAB)  &alt_tab      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
