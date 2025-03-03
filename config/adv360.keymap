@@ -111,6 +111,16 @@
             bindings = <&kp LS(F5)>;
             key-positions = <5 4>;
         };
+
+        Colon-combo {
+            bindings = <&kp COLON>;
+            key-positions = <69 44>;
+        };
+
+        semi-colon-combo {
+            bindings = <&kp SEMI>;
+            key-positions = <44 70>;
+        };
     };
 
     keymap {
