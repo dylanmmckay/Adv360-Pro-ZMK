@@ -193,7 +193,7 @@
             bindings = <
 &trans  &trans          &trans     &trans       &trans     &trans     &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Q           &kp W      &kp E        &kp R      &kp T      &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)    &kp LC(F)  &kp G      &thirty_jump   &trans       &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)       &kp LC(S)  &kp LC(D)    &kp LC(F)  &kp G      &thirty_jump   &trans       &trans        &trans  &trans  &trans  &trans  &to 8   &trans  &trans  &trans  &trans
 &trans  &kp LC(Z)       &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)                              &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_SHIFT  &trans     &kp LS(TAB)  &kp TAB               &alt_tab_hold  &kp LC(TAB)  &alt_tab      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
@@ -206,6 +206,16 @@
 &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT       &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
 &trans  &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans                  &trans      &trans                  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
 &trans  &trans  &trans    &kp PAGE_UP   &kp PAGE_DOWN           &trans  &trans  &trans      &trans  &trans  &kp N0          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        RTS {
+            bindings = <
+&kp GRAVE  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5  &kp N6                                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q      &kp W     &kp E      &kp R      &kp T   &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPS   &kp A      &kp S     &kp D      &kp F      &kp G   &trans     &trans     &trans                &trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans  &trans
+&kp BSPC   &kp Z      &kp X     &kp C      &kp V      &kp B                         &mkp MB3              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &kp GRAVE  &kp LEFT  &kp RIGHT  &kp GRAVE          &kp LSHFT  &kp SPACE  &kp LEFT_CONTROL      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
