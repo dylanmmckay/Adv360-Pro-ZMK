@@ -211,11 +211,11 @@
 
         RTS {
             bindings = <
-&kp N0    &kp N1     &kp N2    &kp N3     &kp N4     &kp N5  &kp N6                                                            &trans     &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB   &kp Q      &kp W     &kp E      &kp R      &kp T   &kp Y                                                             &trans     &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC   &kp A      &kp S     &kp D      &kp F      &kp G   &kp H      &kp LCTRL  &kp LS(LCTRL)      &trans  &trans           &trans     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp BSPC  &kp Z      &kp X     &kp C      &kp V      &kp B                         &mkp MB3           &trans                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RET
-&kp RET   &kp GRAVE  &kp LEFT  &kp RIGHT  &kp GRAVE          &kp LSHFT  &kp SPACE  &mo 9              &trans  &kp RIGHT_SHIFT  &kp ENTER          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
+&kp N0    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5  &kp N6                                                                &trans     &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB   &kp Q     &kp W     &kp E      &kp R      &kp T   &kp Y                                                                 &trans     &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC   &kp A     &kp S     &kp D      &kp F      &kp G   &kp H      &kp LCTRL       &kp LEFT_ALT      &trans  &trans           &trans     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp BSPC  &kp Z     &kp X     &kp C      &kp V      &kp B                              &mo 10            &trans                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RET
+&kp RET   &mkp MB3  &kp LEFT  &kp RIGHT  &kp GRAVE          &kp SPACE  &kp LEFT_SHIFT  &mo 9             &trans  &kp RIGHT_SHIFT  &kp ENTER          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
             >;
         };
 
@@ -224,8 +224,28 @@
 &kp F10         &kp F1  &kp F2    &kp F3    &kp F4     &kp F5  &kp F6                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans  &trans    &kp UP    &trans     &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans  &trans    &trans    &trans     &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_ALT    &trans  &trans    &trans    &trans             &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        RTS_Shift_2 {
+            bindings = <
+&trans  &kp MINUS  &kp BSLH   &kp SQT  &kp LBKT  &kp RBKT  &kp F11                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp U      &kp I      &kp O    &kp P     &kp F9    &kp F10                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT   &trans   &kp LCTRL       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp FSLH                           &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans   &trans              &trans   &kp LEFT_SHIFT  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
