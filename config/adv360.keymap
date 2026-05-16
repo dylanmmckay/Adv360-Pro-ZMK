@@ -251,11 +251,11 @@
 
         RTS_Colemak {
             bindings = <
-&kp N0    &kp N1    &kp N2     &kp N3      &kp N4     &kp N5  &kp N6                                                       &trans   &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB   &kp Q     &kp W      &kp F       &kp P      &kp B   &kp N7                                                       &trans   &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
-&kp ESC   &kp A     &kp R      &kp S       &kp T      &kp G   &kp N8  &kp LCTRL       &kp LEFT_ALT      &trans  &trans     &trans   &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
-&kp BSPC  &kp Z     &kp X      &kp C       &kp D      &kp V                           &mo 14            &trans                      &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp BSPC
-&kp RET   &mkp MB3  &kp COMMA  &kp PERIOD  &kp GRAVE          &mo 15  &kp LEFT_SHIFT  &mo 13            &trans  &kp SPACE  &kp RET          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
+&kp N0  &kp N1    &kp N2     &kp N3      &kp N4     &kp N5  &kp N6                                                        &trans   &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp N9  &kp Q     &kp W      &kp F       &kp P      &kp B   &kp N7                                                        &trans   &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
+&kp N8  &kp A     &kp R      &kp S       &kp T      &kp G   &kp N8   &kp LCTRL       &kp LEFT_ALT      &trans  &trans     &trans   &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
+&kp N7  &kp Z     &kp X      &kp C       &kp D      &kp V                            &mo 14            &trans                      &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp BSPC
+&kp N6  &mkp MB3  &kp COMMA  &kp PERIOD  &kp GRAVE          &kp TAB  &kp LEFT_SHIFT  &mo 13            &trans  &kp SPACE  &kp RET          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
             >;
         };
 
@@ -263,7 +263,7 @@
             bindings = <
 &kp F10         &kp F1  &kp F2    &kp F3    &kp F4     &kp F5  &kp F6                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans  &trans    &kp UP    &trans     &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL       &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE      &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp F1  &kp F2    &kp F3    &kp F4     &kp F5                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_ALT    &trans  &trans    &trans    &trans             &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
