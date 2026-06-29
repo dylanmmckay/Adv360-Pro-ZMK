@@ -333,9 +333,9 @@
             bindings = <
 &kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp ESC                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp N9  &kp R   &kp E   &kp W   &kp Q   &kp T   &kp F10                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp N8  &kp F   &kp D   &kp S   &kp A   &kp G   &trans   &kp SPACE  &kp BSPC       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp N8  &kp F   &kp D   &kp S   &kp A   &kp G   &kp F5   &kp SPACE  &kp BSPC       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp N7  &kp V   &kp C   &kp X   &kp Z   &kp B                       &kp LALT       &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp N6  &trans  &trans  &trans  &trans          &kp TAB  &kp LSHFT  &kp LCTRL      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp N6  &kp F1  &kp F2  &kp F3  &kp F4          &kp TAB  &kp LSHFT  &kp LCTRL      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
