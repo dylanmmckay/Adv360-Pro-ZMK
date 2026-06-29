@@ -110,6 +110,13 @@
             bindings = <&kp ENTER &to 12>;
             label = "SC2_TYPE_OFF";
         };
+
+        GLHF: GLHF {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp G &kp L &kp H &kp F &kp RET>;
+            label = "GLHF";
+        };
     };
 
     combos {
@@ -267,7 +274,7 @@
             bindings = <
 &kp N0  &kp N1    &kp N2     &kp N3      &kp N4     &kp N5  &kp N6                                                        &trans        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp N9  &kp Q     &kp W      &kp F       &kp P      &kp B   &kp N7                                                        &trans        &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
-&kp N8  &kp A     &kp R      &kp S       &kp T      &kp G   &kp N8   &kp LCTRL       &kp LEFT_ALT      &trans  &trans     &trans        &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
+&kp N8  &kp A     &kp R      &kp S       &kp T      &kp G   &kp N8   &kp LCTRL       &kp LEFT_ALT      &trans  &trans     &trans        &kp M   &GLHF   &kp E      &kp I     &kp O     &kp SQT
 &kp N7  &kp Z     &kp X      &kp C       &kp D      &kp V                            &mo 14            &trans                           &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp BSPC
 &kp N6  &mkp MB3  &kp COMMA  &kp PERIOD  &kp GRAVE          &kp TAB  &kp LEFT_SHIFT  &mo 13            &trans  &kp SPACE  &SC2_Type_On          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
             >;
