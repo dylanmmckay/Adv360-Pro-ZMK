@@ -96,6 +96,20 @@
 
             label = "ALT_TAB_HOLD";
         };
+
+        SC2_Type_On: RTS_Type {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &to 16>;
+            label = "RTS_TYPE";
+        };
+
+        SC2_Type_Off: SC2_Type_Off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &to 12>;
+            label = "SC2_TYPE_OFF";
+        };
     };
 
     combos {
@@ -162,7 +176,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3              &kp F4               &kp F5               &kp F6  &tog 2                                        &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans              &trans               &trans               &trans  &none                                         &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &toggle_layer_on 8  &toggle_layer_on 12  &toggle_layer_on 16  &trans  &none     &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &kp INS  &trans   &trans
+&trans  &trans  &toggle_layer_on 8  &toggle_layer_on 12  &toggle_layer_on 17  &trans  &none     &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &kp INS  &trans   &trans
 &trans  &trans  &trans              &trans               &trans               &trans                    &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans              &trans               &trans                       &alt_tab  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
@@ -251,11 +265,11 @@
 
         RTS_Colemak {
             bindings = <
-&kp N0  &kp N1    &kp N2     &kp N3      &kp N4     &kp N5  &kp N6                                                        &trans   &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp N9  &kp Q     &kp W      &kp F       &kp P      &kp B   &kp N7                                                        &trans   &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
-&kp N8  &kp A     &kp R      &kp S       &kp T      &kp G   &kp N8   &kp LCTRL       &kp LEFT_ALT      &trans  &trans     &trans   &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
-&kp N7  &kp Z     &kp X      &kp C       &kp D      &kp V                            &mo 14            &trans                      &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp BSPC
-&kp N6  &mkp MB3  &kp COMMA  &kp PERIOD  &kp GRAVE          &kp TAB  &kp LEFT_SHIFT  &mo 13            &trans  &kp SPACE  &kp RET          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
+&kp N0  &kp N1    &kp N2     &kp N3      &kp N4     &kp N5  &kp N6                                                        &trans        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp N9  &kp Q     &kp W      &kp F       &kp P      &kp B   &kp N7                                                        &trans        &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
+&kp N8  &kp A     &kp R      &kp S       &kp T      &kp G   &kp N8   &kp LCTRL       &kp LEFT_ALT      &trans  &trans     &trans        &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
+&kp N7  &kp Z     &kp X      &kp C       &kp D      &kp V                            &mo 14            &trans                           &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp BSPC
+&kp N6  &mkp MB3  &kp COMMA  &kp PERIOD  &kp GRAVE          &kp TAB  &kp LEFT_SHIFT  &mo 13            &trans  &kp SPACE  &SC2_Type_On          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
             >;
         };
 
@@ -286,6 +300,16 @@
 &trans  &kp F6  &kp F5  &kp F4  &kp F3  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp F8  &kp F7  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        SC2_Typing {
+            bindings = <
+&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                                                          &trans         &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp F   &kp P   &kp B   &trans                                                          &trans         &kp J   &kp L   &kp U      &kp Y    &kp SEMI  &kp BSLH
+&kp ESC    &kp A   &kp R   &kp S   &kp T   &kp G   &trans    &kp LCTRL  &kp LALT          &kp LGUI      &kp RCTRL  &trans         &kp M   &kp N   &kp E      &kp I    &kp O     &kp SQT
+&kp BSPC   &kp Z   &kp X   &kp C   &kp D   &kp V                        &kp LC(BSPC)      &kp BSPC                                &kp K   &kp H   &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+&trans     &trans  &trans  &trans  &trans          &kp BSPC  &kp SPACE  &kp DEL           &kp LS(DLLR)  &kp LSHFT  &SC2_Type_Off          &trans  &trans     &trans   &trans    &trans
             >;
         };
 
