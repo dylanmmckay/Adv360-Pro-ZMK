@@ -182,7 +182,7 @@
             display-name = "Fn";
             bindings = <
 &kp F1  &kp F2  &kp F3              &kp F4               &kp F5               &kp F6  &tog 2                                        &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans              &trans               &trans               &trans  &none                                         &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans              &to 22               &trans               &trans  &none                                         &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &toggle_layer_on 8  &toggle_layer_on 12  &toggle_layer_on 17  &trans  &none     &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &kp INS  &trans   &trans
 &trans  &trans  &trans              &trans               &trans               &trans                    &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans              &trans               &trans                       &alt_tab  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
@@ -367,6 +367,16 @@
 &kp N8  &kp F   &kp D   &kp S   &kp A   &kp G   &kp F5   &kp SPACE  &kp BSPC       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp N7  &kp V   &kp C   &kp X   &kp Z   &kp B                       &kp LALT       &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &kp N6  &kp F1  &kp F2  &kp F3  &kp F4          &kp TAB  &kp LSHFT  &kp LCTRL      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        ESDF_Colemak {
+            bindings = <
+&trans     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &trans  &kp Q   &kp W   &kp E   &kp R   &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC    &trans  &kp A   &kp S   &kp D   &kp F   &trans    &kp LCTRL  &kp LALT      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &trans  &kp Z   &kp X   &kp C   &kp V                        &mo 5         &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans          &kp BSPC  &kp SPACE  &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &to 0
             >;
         };
     };
