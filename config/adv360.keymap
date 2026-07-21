@@ -184,7 +184,7 @@
 &kp F1  &kp F2  &kp F3              &kp F4               &kp F5               &kp F6  &tog 2                                        &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans              &to 22               &to 21               &trans  &none                                         &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &toggle_layer_on 8  &toggle_layer_on 12  &toggle_layer_on 17  &trans  &none     &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &kp INS  &trans   &trans
-&trans  &trans  &trans              &trans               &trans               &trans                    &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans              &to 23               &trans               &trans                    &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans              &trans               &trans                       &alt_tab  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
@@ -377,6 +377,16 @@
 &kp ESC    &trans  &kp A   &kp S   &kp D   &kp F   &trans    &kp LCTRL  &kp LALT      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LSHFT  &trans  &kp Z   &kp X   &kp C   &kp V                        &mo 5         &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &trans  &trans  &trans  &trans          &kp BSPC  &kp SPACE  &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &to 0
+            >;
+        };
+
+        RTS_Colemak_2 {
+            bindings = <
+&kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp F10                                                        &trans        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp N9  &kp Q   &kp W   &kp F   &kp P   &kp B   &kp F5                                                         &trans        &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
+&kp N8  &kp A   &kp R   &kp S   &kp T   &kp G   &kp F6   &kp SPACE       &kp BACKSPACE      &trans  &trans     &trans        &kp M   &GLHF   &kp E      &kp I     &kp O     &kp SQT
+&kp N7  &kp Z   &kp X   &kp C   &kp D   &kp V                            &kp LEFT_ALT       &trans                           &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp BSPC
+&kp N6  &kp F1  &kp F2  &kp F3  &kp F4          &kp TAB  &kp LEFT_SHIFT  &kp LCTRL          &trans  &kp SPACE  &SC2_Type_On          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &to 0
             >;
         };
     };
